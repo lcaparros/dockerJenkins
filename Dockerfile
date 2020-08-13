@@ -1,4 +1,5 @@
 FROM jenkins/jenkins
+ENV JENKINS_USER jenkins
 USER root
 RUN apt-get update && apt-get install -y tree nano curl sudo libltdl7 libnss3 docker-compose
 RUN curl https://get.docker.com/builds/Linux/x86_64/docker-latest.tgz | tar xvz -C /tmp/ && mv /tmp/docker/docker /usr/bin/docker
